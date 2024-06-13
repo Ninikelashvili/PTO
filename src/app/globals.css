@@ -1,5 +1,196 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+@media (min-width: 1280px) {
+    .topLeft,
+    .middleLeft,
+    .bottomLeft{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        position: relative;
+    }
+
+    .topRight,
+    .middleRight,
+    .bottomRight{
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+
+    .middleLeft{
+        display: flex;
+    }
+
+    .topLeft::before,
+    .topRight::before{
+        content: '';
+        height: 51px;
+        width: 60px;
+        transform: translateY(40px);
+    }
+
+    .bottomLeft::before,
+    .bottomRight::before{
+        content: '';
+        height: 51px;
+        width: 60px;
+        transform: translateY(-10px);
+    }
+
+
+    .topLeft::after,
+    .topRight::after{
+        content: '';
+        height: 56px;
+        width: 54px;
+        top: 90px;
+        position: absolute;
+    }
+
+    .bottomLeft::after,
+    .bottomRight::after{
+        content: '';
+        height: 56px;
+        width: 54px;
+        top: -64px;
+        position: absolute;
+    }
+
+    .topLeft::before{
+        border-top: solid 2px #D7CFFD;
+        border-right: solid 2px #D7CFFD;
+        border-top-right-radius: 22px;
+    }
+
+    .checked.topLeft::before{
+        border-top: solid 2px #9D71FD;
+        border-right: solid 2px #9D71FD;
+    }
+
+    .bottomLeft::before{
+        border-bottom: solid 2px #D7CFFD;
+        border-right: solid 2px #D7CFFD;
+        border-bottom-right-radius: 22px;
+    }
+
+    .checked.bottomLeft::before{
+        border-bottom: solid 2px #9D71FD;
+        border-right: solid 2px #9D71FD;
+    }
+
+    .topLeft::after{
+        border-bottom: solid 2px #D7CFFD;
+        border-left: solid 2px #D7CFFD;
+        border-bottom-left-radius: 22px;
+        right: 0;
+    }
+
+    .checked.topLeft::after{
+        border-bottom: solid 2px #9D71FD;
+        border-left: solid 2px #9D71FD;
+        z-index: 999;
+    }
+
+    .bottomLeft::after{
+        border-top: solid 2px #D7CFFD;
+        border-left: solid 2px #D7CFFD;
+        border-top-left-radius: 22px;
+        right: 0;
+    }
+
+    .checked.bottomLeft::after{
+        border-top: solid 2px #9D71FD;
+        border-left: solid 2px #9D71FD;
+        z-index: 999;
+    }
+
+    .topRight::before{
+        border-top: solid 2px #D7CFFD;
+        border-left: solid 2px #D7CFFD;
+        border-top-left-radius: 22px;
+    }
+
+    .checked.topRight::before{
+        border-top: solid 2px #9D71FD;
+        border-left: solid 2px #9D71FD;
+    }
+
+    .bottomRight::before{
+        border-left: solid 2px #D7CFFD;
+        border-bottom: solid 2px #D7CFFD;
+        border-bottom-left-radius: 22px;
+    }
+
+    .checked.bottomRight::before{
+        border-left: solid 2px #9D71FD;
+        border-bottom: solid 2px #9D71FD;
+    }
+
+    .topRight::after{
+        border-bottom: solid 2px #D7CFFD;
+        border-right: solid 2px #D7CFFD;
+        border-bottom-right-radius: 22px;
+        left: 0;  
+    }
+
+    .checked.topRight::after{
+        border-bottom: solid 2px #9D71FD;
+        border-right: solid 2px #9D71FD;  
+        z-index: 999;
+    }
+
+    .bottomRight::after{
+        border-top: solid 2px #D7CFFD;
+        border-right: solid 2px #D7CFFD;
+        border-top-right-radius: 22px;
+        left: 0;  
+    }
+
+    .checked.bottomRight::after{
+        border-top: solid 2px #9D71FD;
+        border-right: solid 2px #9D71FD;
+    }
+
+    .middleLeft::before,
+    .middleRight::before{
+        content: '';
+        height: 2px;
+        width: calc( 100% - 280px);
+        transform: translateY(40px);
+        background-color: #D7CFFD;
+    }
+
+    .checked.middleLeft::before,
+    .checked.middleRight::before{
+        background-color: #9D71FD;
+        z-index: 999;
+    }
+}
+
+@media (max-width: 1439px) {
+    .topLeft::before,
+    .topRight::before{
+        width: 22px;
+    }
+
+    .topLeft::after,
+    .topRight::after{
+        width: calc( 100% - 308px);
+    }
+
+    .bottomLeft::before,
+    .bottomRight::before{
+        width: 22px;
+    }
+
+    .bottomLeft::after,
+    .bottomRight::after{
+        width: calc( 100% - 308px);
+    }
+}
